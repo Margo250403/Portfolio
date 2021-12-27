@@ -1,0 +1,69 @@
+.skills {
+  padding: 93px 0 145px;
+  background-color: #FFFAF2; 
+}
+  
+.skills__title {
+    margin-bottom: 86px; 
+  }
+  
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 125px; 
+}
+  
+.skills-wrapper__image{
+  width: 350px; 
+}
+  
+.skills-wrapper__list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+  
+.skills-wrapper__item {
+  display: flex;
+  flex-direction: column;
+  gap: 21px; 
+}
+  
+.skills-wrapper__item:first-of-type {
+  padding-bottom: 45px; 
+}
+  
+.skills-wrapper__row {
+  display: flex;
+  gap: 60px;
+  align-items: center; 
+}
+  
+.skills-wrapper__name {
+  width: 130px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #333333; 
+}
+  
+.skills-wrapper__value{
+  color: #333333;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  flex-grow: 1; 
+}
+  
+.progressbar{
+  height: 24px;
+  background-color: #F5D6AB;
+  overflow: hidden; 
+}
+  
+.progressbar__track{
+  height: 100%;
+  background-color: #C66C49;
+  width: 33%; 
+}
