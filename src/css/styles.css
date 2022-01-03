@@ -581,11 +581,17 @@ h2 {
   width: 24px;
   height: 24px;
   left: 1238px;
-  bottom: 70px; }
+  top: 3261px; }
 
 .container-layout {
   display: flex;
   justify-content: space-between; }
+
+.title {
+  font-size: 2.4rem;
+  line-height: 1.22;
+  color: #333333;
+  font-weight: bold; }
 
 body,
 html {
