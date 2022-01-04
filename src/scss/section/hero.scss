@@ -14,7 +14,7 @@ html {
   }
 
   @include media-mobile{
-    width: 94%;
+      width: 94%;
   }
 }
 
@@ -27,18 +27,33 @@ html {
     color: white;
      display: flex;
      flex-direction: column;
+
+    @include media-tablet{
+        width: 80%;
+    }
+  
+    @include media-mobile{
+        width: 94%;
+    }
 }
 .logo {
     font-size: 2.4rem;
     line-height: 1.21;
     font-weight: bold;
+
+    @include media-mobile{
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px; }
+    padding-bottom: 30px; 
+}
 
 .header-nav__list{
    display: flex;
@@ -55,16 +70,29 @@ header {
     font-size: 6.4rem;
     line-height: 1.22;
     margin-bottom: 26px; 
+
+     @include media-mobile{
+        text-align: center;
+    }
 }
   
 .hero-content__txt {
     font-size: 2.4rem;
     line-height: 1.21;
     margin-bottom: 106px; 
+
+    @include media-mobile{
+        text-align: center;
+    }
 }
+
   
 .hero-content__link {
     text-decoration: underline;
     font-size: 1.8rem;
     line-height: 1.22; 
+
+    @include media-mobile{
+        text-align: center;
+    }
 }
