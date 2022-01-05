@@ -4,6 +4,12 @@
 
 .portfolio__title {
     margin-bottom: 86px;
+
+    @include media-mobile{
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 19px;
+      }
 }
 
 .portfolio__wrapper{
@@ -23,6 +29,12 @@
     color: #333333;
     font-weight: 600;
     margin-bottom: 48px;
+
+    @include media-mobile{
+        font-size: 1.4rem;
+        line-height: 1.78;
+        margin-bottom: 15px;
+    }
 }
 
 .portfolio__txt {
@@ -31,6 +43,13 @@
     color: #333333;
     flex-grow: 1;
     width: 349px;
+
+    @include media-mobile{
+        font-size: 1.2rem;
+        line-height: 1.25;  
+        width: 308px;
+    }
+  
 }
 
 .portfolio__images {
@@ -42,6 +61,18 @@
                          "river building";
     gap: 32px;
     width: 635px;
+}
+@include media-mobile{
+    font-size: 1.2rem;
+    line-height: 1.25;  
+    width: 308px;
+
+    .portfolio__wrapper{
+        flex-direction: column;
+    }
+    .portfolio__images{
+        width: 100%;
+    } 
 }
 
 @media (max-width: 1230px){
@@ -73,6 +104,10 @@
 .portfolio__buttons{
     display: flex;
     gap: 18px;
+
+    @include media-mobile{
+    overflow: hidden;
+    } 
 }
 
 .portfolio__button{

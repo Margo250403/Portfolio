@@ -5,6 +5,12 @@
   
 .skills__title {
     margin-bottom: 86px; 
+
+    @include media-mobile{
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
   }
   
 .skills-wrapper {
@@ -16,6 +22,10 @@
   
 .skills-wrapper__image{
   width: 350px; 
+
+  @include media-mobile{
+    width: 224px; 
+  }
 }
   
 .skills-wrapper__list {
@@ -47,6 +57,11 @@
   font-size: 1.8rem;
   line-height: 1.2;
   color: #333333; 
+
+  @include media-mobile{
+    font-size: 1.2rem;
+    line-height: 2.0;
+  }
 }
   
 .skills-wrapper__value{
@@ -54,12 +69,21 @@
   font-size: 1.8rem;
   line-height: 1.2;
   flex-grow: 1; 
+
+  @include media-mobile{
+    font-size: 1.2rem;
+    line-height: 2.0;
+  }
 }
   
 .progressbar{
   height: 24px;
   background-color: #F5D6AB;
   overflow: hidden; 
+
+  @include media-mobile{
+    height: 18px;
+  }
 }
   
 .progressbar__track{

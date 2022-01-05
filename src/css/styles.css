@@ -357,6 +357,12 @@ html {
   width: 1110px;
   margin-left: auto;
   margin-right: auto; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 80%; } }
+  @media screen and (max-width: 720px) {
+    .container {
+      width: 94%; } }
 
 .hero {
   padding-top: 93px;
@@ -367,11 +373,22 @@ html {
   color: white;
   display: flex;
   flex-direction: column; }
+  @media screen and (max-width: 1200px) {
+    .hero {
+      width: 80%; } }
+  @media screen and (max-width: 720px) {
+    .hero {
+      width: 94%; } }
 
 .logo {
   font-size: 2.4rem;
   line-height: 1.21;
   font-weight: bold; }
+  @media screen and (max-width: 720px) {
+    .logo {
+      text-align: center;
+      font-size: 2.4rem;
+      line-height: 1.2; } }
 
 header {
   display: flex;
@@ -392,16 +409,40 @@ header {
   font-size: 6.4rem;
   line-height: 1.22;
   margin-bottom: 26px; }
+  @media screen and (max-width: 1200px) {
+    .hero-content__title {
+      text-align: center; } }
+  @media screen and (max-width: 720px) {
+    .hero-content__title {
+      font-size: 2rem;
+      line-height: 1.2;
+      text-align: center; } }
 
 .hero-content__txt {
   font-size: 2.4rem;
   line-height: 1.21;
   margin-bottom: 106px; }
+  @media screen and (max-width: 1200px) {
+    .hero-content__txt {
+      text-align: center; } }
+  @media screen and (max-width: 720px) {
+    .hero-content__txt {
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.23; } }
 
 .hero-content__link {
   text-decoration: underline;
   font-size: 1.8rem;
   line-height: 1.22; }
+  @media screen and (max-width: 1200px) {
+    .hero-content__link {
+      text-align: center; } }
+  @media screen and (max-width: 720px) {
+    .hero-content__link {
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.23; } }
 
 .about {
   padding: 93px 0 115px; }
@@ -414,12 +455,22 @@ h2 {
 
 .about__title {
   margin-bottom: 76px; }
+  @media screen and (max-width: 720px) {
+    .about__title {
+      text-align: center;
+      font-size: 2.4rem;
+      line-height: 1.2; } }
 
 .about__txt {
   color: #333333;
   font-size: 1.8rem;
   line-height: 1.67;
   margin-bottom: 30px; }
+  @media screen and (max-width: 720px) {
+    .about__txt {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.25; } }
 
 .about__txt:last-child {
   margin-bottom: 0; }
@@ -430,6 +481,11 @@ h2 {
 
 .skills__title {
   margin-bottom: 86px; }
+  @media screen and (max-width: 720px) {
+    .skills__title {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 25px; } }
 
 .skills-wrapper {
   display: flex;
@@ -439,6 +495,9 @@ h2 {
 
 .skills-wrapper__image {
   width: 350px; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__image {
+      width: 224px; } }
 
 .skills-wrapper__list {
   flex-grow: 1;
@@ -465,17 +524,28 @@ h2 {
   font-size: 1.8rem;
   line-height: 1.2;
   color: #333333; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__name {
+      font-size: 1.2rem;
+      line-height: 2.0; } }
 
 .skills-wrapper__value {
   color: #333333;
   font-size: 1.8rem;
   line-height: 1.2;
   flex-grow: 1; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__value {
+      font-size: 1.2rem;
+      line-height: 2.0; } }
 
 .progressbar {
   height: 24px;
   background-color: #F5D6AB;
   overflow: hidden; }
+  @media screen and (max-width: 720px) {
+    .progressbar {
+      height: 18px; } }
 
 .progressbar__track {
   height: 100%;
@@ -487,6 +557,11 @@ h2 {
 
 .portfolio__title {
   margin-bottom: 86px; }
+  @media screen and (max-width: 720px) {
+    .portfolio__title {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 19px; } }
 
 .portfolio__wrapper {
   display: flex;
@@ -504,6 +579,11 @@ h2 {
   color: #333333;
   font-weight: 600;
   margin-bottom: 48px; }
+  @media screen and (max-width: 720px) {
+    .portfolio__subtitle {
+      font-size: 1.4rem;
+      line-height: 1.78;
+      margin-bottom: 15px; } }
 
 .portfolio__txt {
   font-size: 1.8rem;
@@ -511,6 +591,11 @@ h2 {
   color: #333333;
   flex-grow: 1;
   width: 349px; }
+  @media screen and (max-width: 720px) {
+    .portfolio__txt {
+      font-size: 1.2rem;
+      line-height: 1.25;
+      width: 308px; } }
 
 .portfolio__images {
   display: grid;
@@ -519,6 +604,15 @@ h2 {
   grid-template-areas: "ships bridge" "river bridge" "river building";
   gap: 32px;
   width: 635px; }
+
+@media screen and (max-width: 720px) {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  width: 308px;
+  .portfolio__wrapper {
+    flex-direction: column; }
+  .portfolio__images {
+    width: 100%; } }
 
 @media (max-width: 1230px) {
   .portfolio__wrapper {
@@ -544,6 +638,9 @@ h2 {
 .portfolio__buttons {
   display: flex;
   gap: 18px; }
+  @media screen and (max-width: 720px) {
+    .portfolio__buttons {
+      overflow: hidden; } }
 
 .portfolio__button {
   background-color: transparent;
@@ -554,14 +651,13 @@ h2 {
   background: #FFFAF2;
   padding: 93px 0 190px; }
 
-.title {
-  font-size: 2.4rem;
-  line-height: 1.22;
-  color: #333333;
-  font-weight: bold; }
-
 .footer__title {
   margin-bottom: 51px; }
+  @media screen and (max-width: 720px) {
+    .footer__title {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 25px; } }
 
 .footer-nav {
   display: flex; }
@@ -575,6 +671,10 @@ h2 {
 .footer-nav__link {
   font-size: 1.8rem;
   line-height: 1.2; }
+  @media screen and (max-width: 720px) {
+    .footer-nav__link {
+      font-size: 1.4rem;
+      line-height: 1.21; } }
 
 .footer__button-icon {
   position: sticky;
@@ -582,6 +682,11 @@ h2 {
   height: 24px;
   left: 1238px;
   top: 3261px; }
+  @media screen and (max-width: 720px) {
+    .footer__button-icon {
+      width: 24px;
+      height: 24px;
+      left: 318px; } }
 
 .container-layout {
   display: flex;
