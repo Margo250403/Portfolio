@@ -5,36 +5,27 @@ html {
 }
 
 .container {
-  width: 1110px;
+  max-width: 1110px;
   margin-left: auto;
   margin-right: auto; 
-
-  @include media-tablet{
-      width: 80%;
-  }
-
-  @include media-mobile{
-      width: 94%;
-  }
+  width: 100%;
 }
 
 .hero {
-    padding-top: 93px;
-    padding-bottom: 30px;
-    min-height: 100vh;
+     padding-top: 93px;
+     padding-bottom: 30px;
+     height: 100vh;
     background-image: url("../img/hero.jpg");
     background-size: cover;
     color: white;
      display: flex;
      flex-direction: column;
+     padding: 93px 20px 30px;
 
-    @include media-tablet{
-        width: 80%;
-    }
-  
-    @include media-mobile{
-        width: 94%;
-    }
+     @include media-mobile{
+       padding: 36px;
+     }
+
 }
 .logo {
     font-size: 2.4rem;
@@ -52,7 +43,37 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px; 
+    width: 100%;
+    padding: 0px 34px 30px;
+    flex-wrap: wrap;
+
+    .burger{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50px;
+      top: 36px;
+      cursor: pointer;
+      span{
+        width: 30px;
+        height: 3px;
+        display: block;
+        background: #fff;
+        margin: 3px;
+      }
+    }
+
+    @include media-mobile{
+        justify-content: center;
+        .header-nav{
+          display: none;
+        }
+        .burger{
+          display: flex;
+        }
+      }
 }
 
 .header-nav__list{
@@ -65,10 +86,22 @@ header {
 .header-nav__link--active{
     font-weight: bold;
 }
+.hero-content{
 
+    @include media-tablet{
+        width: 100%;
+        text-align: center;
+    } 
+
+    @include media-mobile{
+        width: 100%;
+        text-align: center;
+    }
+}
 .hero-content__title {
     font-size: 6.4rem;
     line-height: 1.22;
+    margin-top: 145px;
     margin-bottom: 26px; 
 
     @include media-tablet{
@@ -79,6 +112,7 @@ header {
         font-size: 2rem;
         line-height: 1.2;
         text-align: center;
+        margin-top: 50px;
       }
 }
   
@@ -95,10 +129,10 @@ header {
         text-align: center;
         font-size: 1.3rem;
         line-height: 1.23;
+        margin-bottom: 41px;
     }
 }
 
-  
 .hero-content__link {
     text-decoration: underline;
     font-size: 1.8rem;
@@ -114,3 +148,4 @@ header {
         line-height: 1.23;
     }
 }
+
