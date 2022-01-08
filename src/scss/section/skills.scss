@@ -1,5 +1,5 @@
 .skills {
-  padding: 93px 0 145px;
+  padding: 93px 34px 145px;
   background-color: #FFFAF2; 
 }
   
@@ -10,6 +10,7 @@
       font-size: 2.4rem;
       line-height: 1.2;
       margin-bottom: 25px;
+      text-align: center;
     }
   }
   
@@ -18,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 125px; 
+  flex-wrap: wrap;
 }
   
 .skills-wrapper__image{
@@ -25,6 +27,7 @@
 
   @include media-mobile{
     width: 224px; 
+    margin: 0 auto;
   }
 }
   
@@ -49,6 +52,10 @@
   display: flex;
   gap: 60px;
   align-items: center; 
+
+  @include media-mobile{
+    gap: 10px;
+  }
 }
   
 .skills-wrapper__name {
@@ -61,6 +68,7 @@
   @include media-mobile{
     font-size: 1.2rem;
     line-height: 2.0;
+
   }
 }
   

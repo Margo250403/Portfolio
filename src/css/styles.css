@@ -353,25 +353,18 @@ html {
   font-family: 'Libre Franklin', Arial, sans-serif;
   font-size: 10px; }
 
-.container {
-  max-width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; }
-
 .hero {
   padding-top: 93px;
   padding-bottom: 30px;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   color: white;
   display: flex;
-  flex-direction: column;
-  padding: 93px 20px 30px; }
+  flex-direction: column; }
   @media screen and (max-width: 720px) {
     .hero {
-      padding: 36px; } }
+      padding-top: 36px; } }
 
 .logo {
   font-size: 2.4rem;
@@ -383,35 +376,69 @@ html {
       font-size: 2.4rem;
       line-height: 1.2; } }
 
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0px 34px 30px;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; }
   header .burger {
+    display: none; }
+    header .burger:checked ~ .burger-label {
+      transform: rotate(45deg);
+      top: 46px; }
+      header .burger:checked ~ .burger-label:after {
+        transform: rotate(90deg) translate(-5px, 0); }
+      header .burger:checked ~ .burger-label:before {
+        display: none; }
+    header .burger:checked ~ .header-nav {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 75%;
+      background: rgba(0, 0, 0, 0.9);
+      box-shadow: -10px 0px 10px 2px rgba(34, 60, 80, 0.23); }
+      header .burger:checked ~ .header-nav .header-nav__list {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px; }
+  header .burger-label {
+    width: 30px;
+    height: 3px;
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 5px;
+    background: #fff;
     position: absolute;
-    left: 50px;
-    top: 36px;
-    cursor: pointer; }
-    header .burger span {
+    top: 40px;
+    left: 50px; }
+    header .burger-label:before, header .burger-label:after {
+      content: '';
       width: 30px;
       height: 3px;
-      display: block;
+      display: inline-block;
+      border-radius: 5px;
       background: #fff;
-      margin: 3px; }
+      margin-bottom: -3px; }
+    header .burger-label:after {
+      margin-bottom: -1px; }
   @media screen and (max-width: 720px) {
     header {
       justify-content: center; }
       header .header-nav {
         display: none; }
-      header .burger {
-        display: flex; } }
+      header .burger-label {
+        display: block; } }
 
 .header-nav__list {
   display: flex;
@@ -422,20 +449,9 @@ header {
 .header-nav__link--active {
   font-weight: bold; }
 
-@media screen and (max-width: 1200px) {
-  .hero-content {
-    width: 100%;
-    text-align: center; } }
-
-@media screen and (max-width: 720px) {
-  .hero-content {
-    width: 100%;
-    text-align: center; } }
-
 .hero-content__title {
   font-size: 6.4rem;
   line-height: 1.22;
-  margin-top: 145px;
   margin-bottom: 26px; }
   @media screen and (max-width: 1200px) {
     .hero-content__title {
@@ -444,8 +460,7 @@ header {
     .hero-content__title {
       font-size: 2rem;
       line-height: 1.2;
-      text-align: center;
-      margin-top: 50px; } }
+      text-align: center; } }
 
 .hero-content__txt {
   font-size: 2.4rem;
@@ -458,8 +473,12 @@ header {
     .hero-content__txt {
       text-align: center;
       font-size: 1.3rem;
-      line-height: 1.23;
-      margin-bottom: 41px; } }
+      line-height: 1.23; } }
+
+@media screen and (max-width: 720px) {
+  .hero-content {
+    width: 100%;
+    text-align: center; } }
 
 .hero-content__link {
   text-decoration: underline;
@@ -475,13 +494,7 @@ header {
       line-height: 1.23; } }
 
 .about {
-  padding: 93px 0 115px; }
-
-h2 {
-  font-size: 2.4rem;
-  line-height: 1.22;
-  color: #333333;
-  font-weight: bold; }
+  padding: 93px 34px 115px; }
 
 .about__title {
   margin-bottom: 76px; }
@@ -498,7 +511,7 @@ h2 {
   margin-bottom: 30px; }
   @media screen and (max-width: 720px) {
     .about__txt {
-      text-align: center;
+      text-align: left;
       font-size: 1.2rem;
       line-height: 1.25; } }
 
@@ -506,7 +519,7 @@ h2 {
   margin-bottom: 0; }
 
 .skills {
-  padding: 93px 0 145px;
+  padding: 93px 34px 145px;
   background-color: #FFFAF2; }
 
 .skills__title {
@@ -515,19 +528,22 @@ h2 {
     .skills__title {
       font-size: 2.4rem;
       line-height: 1.2;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px;
+      text-align: center; } }
 
 .skills-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 125px; }
+  gap: 125px;
+  flex-wrap: wrap; }
 
 .skills-wrapper__image {
   width: 350px; }
   @media screen and (max-width: 720px) {
     .skills-wrapper__image {
-      width: 224px; } }
+      width: 224px;
+      margin: 0 auto; } }
 
 .skills-wrapper__list {
   flex-grow: 1;
@@ -547,6 +563,9 @@ h2 {
   display: flex;
   gap: 60px;
   align-items: center; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__row {
+      gap: 10px; } }
 
 .skills-wrapper__name {
   width: 130px;
@@ -583,7 +602,7 @@ h2 {
   width: 33%; }
 
 .portfolio {
-  padding: 93px 0 140px; }
+  padding: 93px 34px 140px; }
 
 .portfolio__title {
   margin-bottom: 86px; }
@@ -591,7 +610,8 @@ h2 {
     .portfolio__title {
       font-size: 2.4rem;
       line-height: 1.2;
-      margin-bottom: 19px; } }
+      margin-bottom: 19px;
+      text-align: center; } }
 
 .portfolio__wrapper {
   display: flex;
@@ -613,7 +633,8 @@ h2 {
     .portfolio__subtitle {
       font-size: 1.4rem;
       line-height: 1.78;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      text-align: center; } }
 
 .portfolio__txt {
   font-size: 1.8rem;
@@ -625,12 +646,13 @@ h2 {
     .portfolio__txt {
       font-size: 1.2rem;
       line-height: 1.25;
-      width: 308px; } }
+      width: 308px;
+      text-align: center; } }
 
 .portfolio__images {
   display: grid;
   grid-template-columns: 350px 250px;
-  grid-template-rows: 36fr 14.25fr 36frs;
+  grid-template-rows: 36fr 14.25fr 36fr;
   grid-template-areas: "ships bridge" "river bridge" "river building";
   gap: 32px;
   width: 635px; }
@@ -670,7 +692,7 @@ h2 {
   gap: 18px; }
   @media screen and (max-width: 720px) {
     .portfolio__buttons {
-      overflow: hidden; } }
+      display: none; } }
 
 .portfolio__button {
   background-color: transparent;
