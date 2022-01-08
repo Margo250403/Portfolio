@@ -5,9 +5,8 @@ html {
 }
 
 .hero {
-  padding-top: 93px;
-  padding-bottom: 30px;
-  min-height: 100vh;
+  padding: 93px 165px 115px;
+  max-height: 100vh;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   color: white;
@@ -15,9 +14,8 @@ html {
   flex-direction: column;
 
   @include media-mobile {
-    padding-top: 36px;
+      padding: 36px 34px 50px;
   }
-
 }
 
 .logo {
@@ -44,9 +42,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 50px;
   width: 100%;
 
   .burger {
@@ -91,7 +87,7 @@ header {
     background: #fff;
     position: absolute;
     top: 40px;
-    left: 50px;
+    left: 34px;
 
     &:before, &:after {
       content: '';
@@ -136,14 +132,11 @@ header {
   line-height: 1.22;
   margin-bottom: 26px;
 
-  @include media-tablet {
-    text-align: center;
-  }
-
   @include media-mobile {
     font-size: 2rem;
     line-height: 1.2;
-    text-align: center;
+    margin-bottom: 13px;
+    font-weight: 400;
   }
 }
 
@@ -152,14 +145,10 @@ header {
   line-height: 1.21;
   margin-bottom: 106px;
 
-  @include media-tablet {
-    text-align: center;
-  }
-
   @include media-mobile {
-    text-align: center;
     font-size: 1.3rem;
     line-height: 1.23;
+    margin-bottom: 41px;
   }
 }
 
@@ -175,12 +164,7 @@ header {
   font-size: 1.8rem;
   line-height: 1.22;
 
-  @include media-tablet {
-    text-align: center;
-  }
-
   @include media-mobile {
-    text-align: center;
     font-size: 1.3rem;
     line-height: 1.23;
   }

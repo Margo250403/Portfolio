@@ -354,9 +354,8 @@ html {
   font-size: 10px; }
 
 .hero {
-  padding-top: 93px;
-  padding-bottom: 30px;
-  min-height: 100vh;
+  padding: 93px 165px 115px;
+  max-height: 100vh;
   background-image: url("../img/hero.jpg");
   background-size: cover;
   color: white;
@@ -364,7 +363,7 @@ html {
   flex-direction: column; }
   @media screen and (max-width: 720px) {
     .hero {
-      padding-top: 36px; } }
+      padding: 36px 34px 50px; } }
 
 .logo {
   font-size: 2.4rem;
@@ -387,9 +386,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 50px;
   width: 100%; }
   header .burger {
     display: none; }
@@ -421,7 +418,7 @@ header {
     background: #fff;
     position: absolute;
     top: 40px;
-    left: 50px; }
+    left: 34px; }
     header .burger-label:before, header .burger-label:after {
       content: '';
       width: 30px;
@@ -453,27 +450,22 @@ header {
   font-size: 6.4rem;
   line-height: 1.22;
   margin-bottom: 26px; }
-  @media screen and (max-width: 1200px) {
-    .hero-content__title {
-      text-align: center; } }
   @media screen and (max-width: 720px) {
     .hero-content__title {
       font-size: 2rem;
       line-height: 1.2;
-      text-align: center; } }
+      margin-bottom: 13px;
+      font-weight: 400; } }
 
 .hero-content__txt {
   font-size: 2.4rem;
   line-height: 1.21;
   margin-bottom: 106px; }
-  @media screen and (max-width: 1200px) {
-    .hero-content__txt {
-      text-align: center; } }
   @media screen and (max-width: 720px) {
     .hero-content__txt {
-      text-align: center;
       font-size: 1.3rem;
-      line-height: 1.23; } }
+      line-height: 1.23;
+      margin-bottom: 41px; } }
 
 @media screen and (max-width: 720px) {
   .hero-content {
@@ -484,17 +476,16 @@ header {
   text-decoration: underline;
   font-size: 1.8rem;
   line-height: 1.22; }
-  @media screen and (max-width: 1200px) {
-    .hero-content__link {
-      text-align: center; } }
   @media screen and (max-width: 720px) {
     .hero-content__link {
-      text-align: center;
       font-size: 1.3rem;
       line-height: 1.23; } }
 
 .about {
-  padding: 93px 34px 115px; }
+  padding: 93px 165px 115px; }
+  @media screen and (max-width: 720px) {
+    .about {
+      padding: 25px 34px 25px; } }
 
 .about__title {
   margin-bottom: 76px; }
@@ -502,7 +493,8 @@ header {
     .about__title {
       text-align: center;
       font-size: 2.4rem;
-      line-height: 1.2; } }
+      line-height: 1.2;
+      margin-bottom: 19px; } }
 
 .about__txt {
   color: #333333;
@@ -511,16 +503,23 @@ header {
   margin-bottom: 30px; }
   @media screen and (max-width: 720px) {
     .about__txt {
-      text-align: left;
+      text-align: justify;
       font-size: 1.2rem;
-      line-height: 1.25; } }
+      line-height: 1.25;
+      margin-bottom: 15px; } }
 
 .about__txt:last-child {
   margin-bottom: 0; }
+  @media screen and (max-width: 720px) {
+    .about__txt:last-child {
+      margin-bottom: 20px; } }
 
 .skills {
-  padding: 93px 34px 145px;
+  padding: 93px 165px 145px;
   background-color: #FFFAF2; }
+  @media screen and (max-width: 720px) {
+    .skills {
+      padding: 25px 34px 25px; } }
 
 .skills__title {
   margin-bottom: 86px; }
@@ -537,6 +536,11 @@ header {
   align-items: center;
   gap: 125px;
   flex-wrap: wrap; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper {
+      width: 308px;
+      margin: 0 auto;
+      gap: 26px; } }
 
 .skills-wrapper__image {
   width: 350px; }
@@ -550,14 +554,23 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__list {
+      gap: 18px; } }
 
 .skills-wrapper__item {
   display: flex;
   flex-direction: column;
   gap: 21px; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__item {
+      gap: 12px; } }
 
 .skills-wrapper__item:first-of-type {
   padding-bottom: 45px; }
+  @media screen and (max-width: 720px) {
+    .skills-wrapper__item:first-of-type {
+      padding-bottom: 31px; } }
 
 .skills-wrapper__row {
   display: flex;
@@ -576,7 +589,8 @@ header {
   @media screen and (max-width: 720px) {
     .skills-wrapper__name {
       font-size: 1.2rem;
-      line-height: 2.0; } }
+      line-height: 2.0;
+      width: 90px; } }
 
 .skills-wrapper__value {
   color: #333333;
@@ -602,7 +616,10 @@ header {
   width: 33%; }
 
 .portfolio {
-  padding: 93px 20px 140px; }
+  padding: 93px 165px 140px; }
+  @media screen and (max-width: 720px) {
+    .portfolio {
+      padding: 25px 34px 25px; } }
 
 .portfolio__title {
   margin-bottom: 86px; }
@@ -610,12 +627,16 @@ header {
     .portfolio__title {
       font-size: 2.4rem;
       line-height: 1.2;
-      margin-bottom: 19px; } }
+      margin-bottom: 19px;
+      text-align: center; } }
 
 .portfolio__wrapper {
   display: flex;
   gap: 125px;
   flex-shrink: 0; }
+  @media screen and (max-width: 720px) {
+    .portfolio__wrapper {
+      gap: 30px; } }
 
 .portfolio__content {
   max-width: 350px;
@@ -632,7 +653,9 @@ header {
     .portfolio__subtitle {
       font-size: 1.4rem;
       line-height: 1.78;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 500; } }
 
 .portfolio__txt {
   font-size: 1.8rem;
@@ -644,12 +667,13 @@ header {
     .portfolio__txt {
       font-size: 1.2rem;
       line-height: 1.25;
-      max-width: 308px; } }
+      max-width: 308px;
+      text-align: center; } }
 
 .portfolio__images {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 36fr 14.25fr 36frs;
+  grid-template-rows: 36fr 14.25fr 36fr;
   grid-template-areas: "ships bridge" "river bridge" "river building";
   gap: 32px;
   width: 635px; }
@@ -661,7 +685,8 @@ header {
   .portfolio__wrapper {
     flex-direction: column; }
   .portfolio__images {
-    width: 100%; } }
+    width: 100%;
+    gap: 15px; } }
 
 @media (max-width: 1230px) {
   .portfolio__wrapper {
@@ -698,7 +723,10 @@ header {
 
 .footer {
   background: #FFFAF2;
-  padding: 93px 34px 190px; }
+  padding: 93px 165px 190px; }
+  @media screen and (max-width: 720px) {
+    .footer {
+      padding: 25px 34px 25px; } }
 
 .footer__title {
   margin-bottom: 51px; }
@@ -717,8 +745,10 @@ header {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin: 30px 10px; }
+  gap: 14px; }
+  @media screen and (max-width: 720px) {
+    .footer-nav__list {
+      margin: 30px 20px; } }
 
 .footer-nav__link {
   font-size: 1.8rem;

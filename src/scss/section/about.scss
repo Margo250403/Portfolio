@@ -1,5 +1,9 @@
 .about {
-  padding: 93px 34px 115px; 
+  padding: 93px 165px 115px;
+
+  @include media-mobile{
+    padding: 25px 34px 25px;
+  }
 }
   
 .about__title {
@@ -9,6 +13,7 @@
     text-align: center;
     font-size: 2.4rem;
     line-height: 1.2;
+    margin-bottom: 19px;
   }
 }
   
@@ -19,12 +24,16 @@
   margin-bottom: 30px; 
 
   @include media-mobile{
-    text-align: left;
+    text-align: justify;
     font-size: 1.2rem;
     line-height: 1.25;
+    margin-bottom: 15px;
   }
 }
   
 .about__txt:last-child {
   margin-bottom: 0; 
+  @include media-mobile{
+    margin-bottom: 20px;
+  }
 }
